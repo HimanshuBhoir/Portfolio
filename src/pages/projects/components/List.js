@@ -1,43 +1,38 @@
 export const ProjectList = [
     {
         company: "Spring Boot Microservices",
-        desc: "Project Head Web",
         timeline: "Dec 2023 - Working",
-        description: `Led and motivated the GDSC’23 MGMCET web development team to deliver impactful projects and enhance
-        student developer engagement through workshops.
-        Led a team of 5 members through 3 web-based projects, enhancing collaboration, reach, and social impact.`,
+        description: `Creating Spring Boot microservices for an electrical shop's e-commerce, exploring server coordination to achieve full automation and streamlined operations.`,
         skills: ['Java', 'MySQL', 'SpringBoot', 'Maven', 'Postman'],
-        github: 'https://github.com/HimanshuBhoir',
+        github: 'https://github.com/HimanshuBhoir/SpringBoot-Microservices',
     },
     {
         company: "GDSC Portfolio",
-        desc: "Project Head Web",
         timeline: "July 2023 - Aug 2023",
-        description: `Forged a dynamic portfolio for GDSC’23 MGMCET, channeling relentless dedication into redefining student engagement and amplifying the club’s societal influence. 
-        This endeavor was marked by a meticulous process, sculpting a platform that not only captured attention but also fostered lasting connections. 
-        The outcome? A captivating digital space that resonated with the audience, nurturing interactions and expanding the club’s impact far beyond.`,
-        skills: ['React', 'styled-components','framer motion','locomotive-scroll','css-doodle'],
-        github: 'https://github.com/HimanshuBhoir',
+        description: `Crafted a dynamic GDSC’23 MGMCET portfolio, redefining student engagement and amplifying societal influence. Meticulously sculpted a platform that fostered lasting connections, resonating with the audience and expanding the club’s impact significantly.`,
+        skills: ['React', 'styled-components','Framer Motion','locomotive-scroll','css-doodle'],
+        github: 'https://github.com/HimanshuBhoir/gdsc-mgmcet.github.io',
     },
     {
         company: "Advisely",
-        desc: "Project Head Web",
-        timeline: "July 2023 - Present",
-        description: `Led and motivated the GDSC’23 MGMCET web development team to deliver impactful projects and enhance
-        student developer engagement through workshops.
-        Led a team of 5 members through 3 web-based projects, enhancing collaboration, reach, and social impact.`,
+        timeline: "Jan 2023 - Mar 2023",
+        description: `Engineered Advisely's ZegoCloud-powered video consultation platform, seamlessly connecting consumers with professionals across diverse services. Streamlined processes saved 17% time, ensuring robust security, and optimizing UI with MERN Stack for enhanced responsiveness and usability.`,
         skills: ['React','NodeJS','Express','MongoDB','ZegoCloud'],
-        github: 'https://github.com/HimanshuBhoir',
+        github: 'https://github.com/HimanshuBhoir/Advisely',
     },
     {
         company: "Raise-IT",
-        desc: "Project Head Web",
-        timeline: "July 2023 - Present",
-        description: `Led and motivated the GDSC’23 MGMCET web development team to deliver impactful projects and enhance
-        student developer engagement through workshops.
-        Led a team of 5 members through 3 web-based projects, enhancing collaboration, reach, and social impact.`,
+        timeline: "Sep 2022 - Nov 2022",
+        description: `Sparked active community engagement, fueling regional awareness for 40% of socially active adults. Crafted a secure, intuitive platform for vibrant discussions, trends, and voting experiences.`,
         skills: ['React','NodeJS','Express','MongoDB','Cloudinary'],
-        github: 'https://github.com/HimanshuBhoir',
+        github: 'https://github.com/HimanshuBhoir/host',
+    },
+    {
+        company: "FOODOFAST",
+        timeline: "Jul 2021 - Sep 2021",
+        description: `Revolutionized food ordering and payment through independent systems, significantly enhancing efficiency compared to traditional methods. Elevated user interface functionality using Java and Swing, ensuring seamless interactions and improved user satisfaction.`,
+        skills: ['Java','MySQL','Swing'],
+        github: 'https://github.com/HimanshuBhoir/FoodoFast',
     }
 ]
 

@@ -13,6 +13,7 @@ import Education from './pages/education';
 import Skills from './pages/skills';
 import Achievement from './pages/achievement';
 import Hero from './pages/hero/Hero';
+import Contact from './pages/contact';
 
 
 function App() {
@@ -45,7 +46,8 @@ function App() {
               <Project sectionRefs={sectionRefs} />
               <Skills sectionRefs={sectionRefs} />
               <Education sectionRefs={sectionRefs} />
-              <Achievement sectionRefs={sectionRefs} />
+              {/* <Achievement sectionRefs={sectionRefs} /> */}
+              <Contact />
             </Wrapper>
           </>
       </Body>

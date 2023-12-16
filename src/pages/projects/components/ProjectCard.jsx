@@ -61,7 +61,7 @@ const Description = styled.div`
   justify-content: center;
   align-items: flex-start;
   gap: 2vh;
-  opacity: 0.4;
+  opacity: 0.7;
   &:hover{
     opacity: 1;
   }
