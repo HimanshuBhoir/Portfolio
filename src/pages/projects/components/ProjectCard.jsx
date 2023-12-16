@@ -1,37 +1,28 @@
-// import { AiFillGithub } from "@react-icons/all-files/ai/AiFillGithub";
-// import parseGithubURL from "@utils/parseGithubURL";
 import styled from "styled-components";
+import { Textfit } from 'react-textfit';
 
-function ProjectCard({ title, description, stack, reverse }) {
-  const handleCardClick = () => {};
+function ProjectCard({ title, description, stack, timeline, github }) {
 
   return (
     <BigContainer>
-      <MainWrapper reverseOrder={reverse === true} onClick={handleCardClick}>
+      <MainWrapper onClick={() => window.open(github)}>
         <Description>
           <Title>
             <span>{title}</span>
           </Title>
-          <Desc>{description}</Desc>
           <HorizontalBar />
+          <TimeLine>{timeline}</TimeLine>
+          <Desc>{description}</Desc>
           <StackTitle>Stack</StackTitle>
-          {/* <StackContainer>
-            {stack.map((el, idx) => {
-              return <Stack key={idx}>{el}</Stack>;
-            })}
-          </StackContainer> */}
+          <Textfit>
+            <StackContainer>
+              {stack.map((el, idx) => {
+                return <Stack key={idx}>{el}</Stack>;
+              })}
+            </StackContainer>
+          </Textfit>
         </Description>
-        <ImageContainer>
-          <Image />
-        </ImageContainer>
       </MainWrapper>
-      {/* <IconContainer reverseOrder={reverse === true}>
-        {/* <ExternalLink href={repolink} target="_blank" rel="noreferrer noopener"> */}
-          {/* <GithubIcon /> */}
-          {/* <LinkDesc>{parseGithubURL(repolink)}</LinkDesc> */}
-          {/* <LinkDesc className="dark">→</LinkDesc> */}
-        {/* </ExternalLink> */}
-      {/* </IconContainer> */}
     </BigContainer>
   );
 }
@@ -48,16 +39,20 @@ const BigContainer = styled.div`
 const MainWrapper = styled.div`
   width: 100%;
   height: fit-content;
-
   display: flex;
   flex-direction: ${(props) => (props.reverseOrder ? "row" : "row-reverse")};
-
   background-color: black;
-  color: white;
+  color: #ffffffb4;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
 `;
 
 const Description = styled.div`
-  width: 50%;
+  width: 100%;
 
   margin-bottom: 5vh;
 
@@ -65,127 +60,58 @@ const Description = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 5vh;
+  gap: 2vh;
+  opacity: 0.4;
+  &:hover{
+    opacity: 1;
+  }
 `;
 
 const Title = styled.h3`
   position: relative;
-
-  padding: 5px;
-
-  font-weight: 600;
-  letter-spacing: 2px;
-  font-size: 5.5vw;
-
+  font-weight: 400;
+  line-height: 3.5vw;
+  letter-spacing: 1px;
+  font-size: 3vw;
+  opacity: 1;
   overflow: hidden;
 `;
 
+const TimeLine = styled.p`
+  font-size: 1.3vw;
+  line-height: 1;
+  letter-spacing: 0.5px;
+`;
+
 const Desc = styled.p`
-  font-size: 1.2vw;
-  line-height: 1.4;
+  font-size: 1.3vw;
+  line-height: 1.5vw;
+  letter-spacing: 0.5px;
+  text-align: justify;
 `;
 
 const HorizontalBar = styled.hr`
   width: 100%;
   height: 3px;
-
   margin: -1vh 0;
-
-  background-color: white;
+  position: relative;
+  background-color: #ffffffb4;
 `;
 
 const StackTitle = styled.h3`
-  font-weight: 300;
-  font-size: 5vw;
-`;
-
-const ImageContainer = styled.div`
-  width: 50%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-const Image = styled.div`
-  width: 100%;
-  height: 100%;
+  font-weight: 100;
+  font-size: 1.8vw;
 `;
 
 const StackContainer = styled.div`
   width: 100%;
-  display: grid;
+  display: flex;
+  justify-content: space-between;
   grid-gap: 1vmax;
-  grid-template-columns: 1fr 1fr;
 `;
 
-const Stack = styled.li`
-  font-weight: 300;
-  font-size: 1.8vw;
-`;
-
-const IconContainer = styled.div`
-  width: 100%;
-  height: 3vh;
-  display: flex;
-  justify-content: ${(props) =>
-    props.reverseOrder ? "flex-start" : "flex-end"};
-  align-items: center;
-`;
-
-const ExternalLink = styled.a`
-  text-decoration: none;
-  color: white;
-
-  padding: 0 20px;
-
-  position: relative;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2vw;
-
-  &:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-
-    width: 100%;
-    height: 100%;
-    background-color: #ffffff;
-    mix-blend-mode: difference;
-
-    transform: scaleX(0);
-    transform-origin: left center;
-    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-  }
-
-  &:hover::after {
-    transform: scaleX(1);
-
-    font-weight: 500;
-  }
-`;
-
-// const GithubIcon = styled(AiFillGithub)`
-//   width: 1vmax;
-//   height: 1vmax;
-
-//   min-width: 25px;
-//   min-height: 25px;
-// `;
-
-const LinkDesc = styled.span`
-  font-size: 2vw;
-  font-weight: 300;
-
-  &.dark {
-    position: sticky;
-    font-weight: 500;
-    font-size: 3vw;
-    z-index: 100;
-    color: black;
-  }
+const Stack = styled.h5`
+  font-weight: 100;
+  font-size: 1.3vw;
+  padding: 2px;
 `;

@@ -1,23 +1,12 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import { focusedSectionAtom } from '../skills/atoms/index';
-import { RecoilRoot, useSetRecoilState } from 'recoil';
-import { ExperienceList } from './List';
-import useIntersectionObserver from '../../hooks/useIntersectionObserver';
+import { ProjectList } from './components/List';
 import ProjectCard from './components/ProjectCard';
 import Header from '../../components/header';
+import Carousal from './components/Carousal';
 
 function index({ sectionRefs }) {
   const scrollRef = useRef(null);
-  const THRESHOLD = 0.9;
-  const sectionEntry = useIntersectionObserver(scrollRef, { threshold: 0.9 });
-  const setFocusedSection = useSetRecoilState(focusedSectionAtom);
-
-  // useEffect(() => {
-  //   if (sectionEntry?.intersectionRatio > THRESHOLD) {
-  //     setFocusedSection(0);
-  //   }
-  // }, [sectionEntry, setFocusedSection]);
 
   return (
     <Container
@@ -26,31 +15,30 @@ function index({ sectionRefs }) {
         scrollRef.current = el;
       }}
     >
-      <Header SectionName="Projects" />
-      <ProjectContainer>
-        <SpellContainer>
-          <Spell>Everyone can spell the code,</Spell>
+      <Header SectionName="Project" />
+      <SpellContainer>
+          <Spell>Learning code is the start,</Spell>
           <Spell className="pink">
-            But not everyone can write the&nbsp;
+            but perfecting the  &nbsp;
+            <Carousal /> &nbsp;
+            is the journey.
           </Spell>
         </SpellContainer>
-        <CardContainer>
-          {ExperienceList.map((prj, idx) => {
-            return (
-              <ProjectCard
-                key={idx}
-                title={prj.company}
-                description={prj.timeline}
-                // repolink={prj.repolink}
-                stack={prj.skills}
-                reverse={idx % 2 === 0}
-              />
-            );
-          })}
-        </CardContainer>
+      <ProjectContainer onc>
+        {ProjectList.map((prj, idx) => (
+          <CardContainer key={idx}>
+            <ProjectCard
+              title={prj.company}
+              timeline={prj.timeline}
+              description={prj.description}
+              stack={prj.skills}
+              github={prj.github}
+            />
+          </CardContainer>
+        ))}
       </ProjectContainer>
     </Container>
-  )
+  );
 }
 
 export default index;
@@ -60,11 +48,18 @@ const Container = styled.section`
 `;
 
 const ProjectContainer = styled.div`
-  width: 100%;
+  padding: 5vw;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 5vw;
+`;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+const CardContainer = styled.div`
+  /* padding: 0; */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
 `;
 
 const SpellContainer = styled.div`
@@ -81,23 +76,13 @@ const SpellContainer = styled.div`
 const Spell = styled.span`
   display: inline-block;
   font-family: "Neue Montreal";
-  font-size: 4.3vw;
+  font-size: 3vw;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 4vw;
 
-  color: white;
+  color: #ffffffb4;
 
   &.pink {
     display: flex;
   }
 `;
-
-const CardContainer = styled.div`
-  padding: 0 10%;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5vh;
-`

@@ -17,7 +17,7 @@ function Hero() {
         </Line2>
         <Line3>
           <div>
-          ɪ CĦ<Gray>n</Gray> 匚O<Gray>dᗴ,</Gray>
+          ɪ CĦ<Light>n</Light> 匚O<Light>dᗴ,</Light>
           </div>
         </Line3>
         <Line4>
@@ -73,7 +73,7 @@ const Line = styled.div`
   line-height: 0;
 
   background-color: black;
-  color: white;
+  color: #ffffffb4;
 
   &:after {
     content: "";
@@ -83,8 +83,9 @@ const Line = styled.div`
 
     width: 100%;
     height: 100%;
-    background-color: white;
+    background-color: #ffffffb4;
     mix-blend-mode: difference;
+    color: white;
 
     transform: scaleX(0);
     transition: transform 1.5s ease-in-out;
@@ -113,7 +114,8 @@ const Line2 = styled(Line)`
 
 const Line3 = styled(Line)`
   font-size: 8vw;
-
+  background-color: #504f4f;
+  color: #ffffffb4;
   &:after {
     transform-origin: right center;
   }
@@ -129,6 +131,10 @@ const Line4 = styled(Line)`
 
 const Gray = styled.span`
   color: #504f4f;
+`;
+
+const Light = styled.span`
+  color: #ffffff3f;
 `;
 
 const Blank = styled.div`

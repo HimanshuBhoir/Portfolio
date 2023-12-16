@@ -23,6 +23,8 @@ export default Introduction;
 
 const Paragraph = styled.p`
   display: block;
+  color: #ffffffb4;
+
 
   line-height: 1.2;
   line-break: auto;

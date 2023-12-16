@@ -130,7 +130,7 @@ const Category = styled.span`
   display: inline-block;
   padding: 0 3vw;
 
-  color: ${(props) => (props.isSelected ? "#ffffff" : "#232323")};
+  color: ${(props) => (props.isSelected ? "#ffffffb4" : "#232323")};
   transition: color 0.8s ease-in-out;
 `;
 
@@ -145,7 +145,7 @@ const TextWrapper = styled.div`
   padding: 0 3vw;
   position: relative;
   line-height: 1.5;
-  color: ${(props) => (props.isSelected ? 'white' : props.prof)};
+  color: ${(props) => (props.isSelected ? '#ffffffb4' : props.prof)};
   background-color: ${(props) => (props.isSelected ? props.prof : 'initial')};
   transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
 
@@ -183,7 +183,7 @@ const TextWrapper = styled.div`
 const Text = styled.span`
   font-family: "Lato";
   font-weight: ${(props) => (props.isSelected ? 900: 100)};
-  color: ${(props) => (props.isSelected ? 'white' : props.prof)};
+  color: ${(props) => (props.isSelected ? '#ffffffb4' : props.prof)};
   opacity: ${(props) => (props.isSelected ? 1 : 0.3)};
   transition: color 0.8s ease-in-out;
 `;

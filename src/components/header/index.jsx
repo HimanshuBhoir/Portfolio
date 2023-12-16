@@ -21,6 +21,8 @@ const Container = styled.figure`
   width: 100%;
   padding: 10vh 0 10vh;
   background-color: black;
+  color: #ffffffb4;
+
 `;
 
 const HeadingWrapper = styled.div`
@@ -49,22 +51,26 @@ const Fonts = styled.div`
 
 const H2 = styled.h2`
   font-size: 4vw;
+  color: #ffffffb4;
+
 `;
 
 const H3 = styled.h2`
   font-size: 5vw;
+  color: #ffffffb4;
+
 `;
 
 const HorizonalDivider = styled.hr`
   height: 0%;
   flex-grow: 6;
   background-color: transparent;
-  border-top: 3px solid white;
+  border-top: 2px groove #ffffffb4;
 `;
 
 const HorizonalDivider2 = styled.hr`
   height: 0%;
   flex-grow: 6;
   background-color: transparent;
-  border-top: 3px solid white;
+  border-top: 2px groove #ffffffb4;
 `;
