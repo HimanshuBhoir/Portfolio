@@ -143,10 +143,12 @@ const HorizontalBar = styled.hr`
 `;
 
 const Desc = styled.p`
-  font-size: 1.1vw;
-  line-height: 1.6vw;
+  font-size: 1.3vw;
+  line-height: 1.5vw;
   margin-top: 2vw;
   margin-bottom: 1vw;
+  letter-spacing: 0.5px;
+  text-align: justify;
 `;
 
 const StackTitle = styled.h3`
@@ -158,10 +160,12 @@ const StackTitle = styled.h3`
 const StackContainer = styled.div`
   width: 100%;
   display: flex;
+  justify-content: space-between;
+  /* grid-gap: 1vmax; */
 `;
 
-const Stack = styled.li`
-  padding: 5px;
-  font-weight: 300;
-  font-size: 1vw;
+const Stack = styled.h5`
+  font-weight: 100;
+  font-size: 1.3vw;
+  padding: 2px;
 `;
