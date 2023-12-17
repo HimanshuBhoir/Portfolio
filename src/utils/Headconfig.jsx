@@ -11,7 +11,7 @@ function HeadConfig() {
       <Helmet>
         <title>
           {isFocused && !isIdle
-            ? 'Himanshu'
+            ? 'Him\'s Portfolio'
             : 'where are you?'}
         </title>
       </Helmet>

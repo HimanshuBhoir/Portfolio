@@ -16,7 +16,7 @@ function index({ sectionRefs }) {
     }}
     >
       <Header SectionName={'Education'}/>
-      <EducationContainer onc>
+      <EducationContainer>
         {EducationList.map((edu, idx) => (
           <CardContainer key={idx}>
             <EducationCard
@@ -42,7 +42,7 @@ const EducationContainer = styled.div`
   padding: 5vw;
   width: 90%;
   display: grid;
-  gap: 2vw;
+  /* gap: 2vw; */
 `;
 
 const CardContainer = styled.div``;
