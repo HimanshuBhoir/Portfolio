@@ -102,6 +102,10 @@ const Line1 = styled(Line)`
   &:after {
     transform-origin: right center;
   }
+
+  @media (max-width: 450px) {
+    font-size: 15vw;
+  }
 `;
 
 const Line2 = styled(Line)`
@@ -109,6 +113,9 @@ const Line2 = styled(Line)`
 
   &:after {
     transform-origin: left center;
+  }
+  @media (max-width: 450px) {
+    font-size: 15vw;
   }
 `;
 
@@ -119,6 +126,9 @@ const Line3 = styled(Line)`
   &:after {
     transform-origin: right center;
   }
+  @media (max-width: 450px) {
+    font-size: 15vw;
+  }
 `;
 
 const Line4 = styled(Line)`
@@ -126,6 +136,9 @@ const Line4 = styled(Line)`
 
   &:after {
     transform-origin: left center;
+  }
+  @media (max-width: 450px) {
+    font-size: 13vw;
   }
 `;
 

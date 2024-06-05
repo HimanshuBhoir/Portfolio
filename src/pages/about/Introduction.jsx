@@ -32,6 +32,11 @@ const Paragraph = styled.p`
   font-size: 2vw;
   font-family: "Neue Montreal";
   font-weight: 200;
+  @media (max-width: 450px){
+    font-size: 4vw;
+    line-height: 1;
+    font-weight: 150;
+  }
 `;
 
 const Strong = styled.strong`

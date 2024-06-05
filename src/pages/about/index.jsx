@@ -38,25 +38,32 @@ export default index;
 
 const Container = styled.section`
   width: 100%;
+  height: 100%;
 
   display: flex;
   flex-direction: column;
 
   color: white;
   background-color: black;
+  @media (max-width: 450px){
+    height: 100%;
+  }
 `;
 
 const ContentContainer = styled.section`
   width: 100%;
   display: flex;
-  justify-content: space-between;
-`;
+  align-items: center;
+  @media (max-width: 450px){
+    display: block;
+  }
+  `;
 
 const Description = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
 
   padding: 2vw;
 `;

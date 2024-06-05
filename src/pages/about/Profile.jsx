@@ -31,19 +31,21 @@ function Profile() {
 export default Profile;
 
 const ProfileContainer = styled.div`
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
-  vertical-align: middle;
+  vertical-align: center;
   cursor: none;
-  height: 100%;
   width: 25vw;
+  @media (max-width: 450px){
+    height: 30%;
+    width: 30%;
+  }
 `;
 
 const ProfileImage = styled(motion.div)`
-  height: 100%;
-  width: 100%;
-  vertical-align: middle;
+  height: 50vh;
+  vertical-align: center;
   background-image: url(${profileImage});
   background-size: cover ;
   background-position: center;
@@ -51,5 +53,9 @@ const ProfileImage = styled(motion.div)`
   transition: filter 3s ease-in-out;
   &:hover{
     filter: saturate(100%);
+  }
+  @media (max-width: 450px){
+    height: 20vh;
+    width: 40vw;
   }
 `;

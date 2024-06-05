@@ -31,7 +31,9 @@ function index({ sectionRefs }) {
       <ExperienceContainer>
         <SpellContainer>
           <Textfit>
-          <Spell> <TypeAnimation sequence={lines} speed={20} wrapper = "div" /> </Spell>
+          <Spell> 
+            <TypeAnimation sequence={lines} speed={20} wrapper = "div" /> 
+          </Spell>
           </Textfit>
         </SpellContainer>
         <CardContainer>
@@ -58,6 +60,7 @@ export default index;
 
 const Container = styled.section`
   width: 100%;
+  display: grid;
 `;
 
 const ExperienceContainer = styled.div`
@@ -70,14 +73,23 @@ const ExperienceContainer = styled.div`
 
 const SpellContainer = styled.div`
   width: 100%;
+  /* height: 15vw; */
+  /* overflow: auto; */
   box-sizing: border-box;
-
+  justify-content: left;
+  align-items: center;
+  display: flex;
   padding: 1vh 0 1vh;
   padding-left: 2vw;
   padding-right: 2vw;
 
   display: grid;
   grid-template-rows: 1fr 1fr;
+
+  @media (max-width: 450px) {
+    height: 20vw;
+  }
+
 `;
 
 const Spell = styled.span`
@@ -92,6 +104,11 @@ const Spell = styled.span`
 
   &.pink {
     display: flex;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 5vw;
+    /* line-height: 3; */
   }
 `;
 

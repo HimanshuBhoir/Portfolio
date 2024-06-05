@@ -19,7 +19,7 @@ export default index;
 
 const Container = styled.figure`
   width: 100%;
-  padding: 10vh 0 10vh;
+  padding: 5vh 0 3vh;
   background-color: black;
   color: #ffffffb4;
 
